@@ -27,7 +27,7 @@
 
 4. Node(JavaScript) project(C/S Application, package)생성
     1) 프로젝트 디렉토리 생성 (mkdir)
-    2) 프로젝트 이동 (cd)
+    2) 프로젝트 이동 (cd)vd 
     3) [project-ex01] $ npm init  -y npm 초기화 해주기,-y를 하면 모두 yes, 기본설정으로 만들어 진다. (프로젝트 매니페스트 파일 (package-json) 생성, 프로젝트 초기화)
 
 5. Module
@@ -35,4 +35,16 @@
     2) 파일 모듈 : 파일 경로로 불러와서 모듈안의 객체, 함수, 클래스를 사용한다.
     3) npm 모듈 : npm을 통해서 node_module 에서 설치해서 사용하는 모듈
      
+6. npmjs.com npm registry에 패키지 배포
+    1. 사용자 등록
+    2. 배포하기
+        $ npm adduser
+        $ npm publish
+7. helloweb-ex01: 맨바닥에서 웹 어플리케이션 만들어 보기
+    1. app01: based on http : core Module
+    2. app02 : based on http, fs : core Module
+    3. app03 : based on connect, serve-static : npm package
+    4. app04 :  based on connect, serve-static , connect-route: npm package
 
+8. helloweb-ex02: express 프레임 워크 기반의 웹어플리케이션 만들기
+    

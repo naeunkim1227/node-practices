@@ -1,12 +1,15 @@
 {
-  "name": "douzone-naeun1227-math",
+  "name": "helloweb-ex01",
   "version": "1.0.0",
-  "main": "douzone-naeun1227-math.js",
+  "description": "",
+  "main": "app01.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "dependencies": {
+    "connect-route": "^0.1.5"
+  }
 }
