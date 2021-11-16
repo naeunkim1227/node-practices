@@ -1,15 +1,21 @@
 {
   "name": "project-ex02",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "debug": "nodemon index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "douzone-naeun1227-math": "file:../douzone-naeun1227-math"
+    "douzone-naeun1227-math": "file:../douzone-naeun1227-math",
+    "express": "^4.17.1"
+  },
+  "description": "",
+  "devDependencies": {
+    "ejs": "^3.1.6",
+    "nodemon": "^2.0.15"
   }
 }
