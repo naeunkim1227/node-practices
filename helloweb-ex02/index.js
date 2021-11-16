@@ -5,6 +5,7 @@ const http  = require('http');
 //모듈
 const mainRouter = require('./routes/main');
 const helloRouter = require('./routes/hello');
+const userRouter = require('./routes/user');
 
 const port = 8080;
 
@@ -14,20 +15,21 @@ const application = express()
     //1. static resources 
     .use(express.static(path.join(__dirname, 'public')))
     //2. request body parser
-    .use(express.urlencoded({extends: true})) // application/x-www-form-urlencoded
+    .use(express.urlencoded({extended: true})) // application/x-www-form-urlencoded
     .use(express.json()) // application/json
     //3. view engine setup
     .set('views', path.join(__dirname, 'views'))
     .set('view engine', 'ejs')
     //4. request router
     .all('*', function(req, res, next){
-        req.locals.req = req;
-        req.locals.res = res;
+        res.locals.req = req;
+        res.locals.res = res;
         next();
     })
     //매핑 처리 
     .use('/', mainRouter)
-    .use('/hello', helloRouter)
+   .use('/hello', helloRouter)
+   .use('/user', userRouter)
 
 
 
