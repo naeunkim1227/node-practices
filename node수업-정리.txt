@@ -107,3 +107,46 @@ package.json 스크립트
  [emaillist] $ mkdir views
 
 
+
+-- 
+
+10. guestbook(mo1) 
+[guestbook] $ npm init -y
+
+2)
+[guestbook] $ npm i express
+[guestbook] $ npm i ejs
+[guestbook] $ npm i mysql2
+[guestbook] $ npm i -D nodemon
+
+
+3) 수정
+package.json 스크립트
+  "scripts": {
+    "start": "node index.js",
+    "debug": "nodaemon index.js"
+  },
+  다음과 같이 수정하기
+1. 서비스 운용시  [helloweb-ex02] $ npm start
+2. 개발시         [helloweb-ex02] $ npm run debug
+
+
+4) 디렉토리 구조
+ [guestbook] $ mkdir public
+ [guestbook] $ mkdir routes
+ [guestbook] $ mkdir controllers
+ [guestbook] $ mkdir models
+ [guestbook] $ mkdir views
+
+
+---
+
+11. mysite(model based on Sequelize) - ORM 기반
+
+1. orm(Sequelize) > js Test
+2. user(session, 인증, 접근제어), jQuery(ajax) + API
+3. views -> include(ejs)
+4. dotenv(configuration: DB connection,port, static directory)
+5. log(win)
+6. fileupload(multer)
+7. error 처리ㅓ
