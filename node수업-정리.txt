@@ -149,4 +149,4 @@ package.json 스크립트
 4. dotenv(configuration: DB connection,port, static directory)
 5. log(win)
 6. fileupload(multer)
-7. error 처리ㅓ
+7. error 처리
