@@ -1,21 +1,25 @@
-//routes index.js 에서 각 라우터로 이동
+//const errorRoute = require('./error');
 
+const applicationRouter = {
+    setup: function(application) {
+        
+        //const site = models.Site.findOne();
 
-//모듈
+        application
+            .all('*', function(req, res, next){
+                res.locals.req = req;
+                res.locals.res = res;
+                next();
+            })
 
+            .use('/',  require('./main'))
+            .use('/user', require('./user'))
 
-const mainRouter = require('./routes/main');
-const userRouter = require('./routes/user');
+            //.use(errorRoute.error404)
+            //.use(errorRoute.error500)
 
+            .siteTitle = 'MySite';
+    }
+}
 
-  //4. request router
-  .all('*', function(req, res, next){
-    res.locals.req = req;
-    res.locals.res = res;
-    next();
-})
-
-
-
-//.use('/', mainRouter)
-    //.use('/user', userRouter);
+module.exports = { applicationRouter }
